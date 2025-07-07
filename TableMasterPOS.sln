@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableMaster", "WindowsFormsApp1\TableMaster.csproj", "{0C9B10D5-390B-4190-A96E-D5F6C76EF4EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C9B10D5-390B-4190-A96E-D5F6C76EF4EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C9B10D5-390B-4190-A96E-D5F6C76EF4EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C9B10D5-390B-4190-A96E-D5F6C76EF4EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C9B10D5-390B-4190-A96E-D5F6C76EF4EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {92F3DFF7-6733-4C28-A1E8-55E30E29D1AE}
+	EndGlobalSection
+EndGlobal
