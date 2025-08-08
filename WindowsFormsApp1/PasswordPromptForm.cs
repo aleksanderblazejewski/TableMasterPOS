@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Windows.Forms;
+using TableMasterPOS;
 
 namespace WindowsFormsApp1
 {
-    public partial class PasswordPromptForm : Form
+    public partial class PasswordPromptForm : ModernForm
     {
         public string EnteredPassword => txtPassword.Text;
 

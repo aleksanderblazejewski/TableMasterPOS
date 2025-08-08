@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace TableMasterPOS
 {
-    public partial class FormTablesEditor : Form
+    public partial class FormTablesEditor : ModernForm
     {
         private const string ApiUrl = "https://pos-api-hmavg4e4execcuhp.polandcentral-01.azurewebsites.net";
 

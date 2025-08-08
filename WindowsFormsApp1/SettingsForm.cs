@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
+using TableMasterPOS;
 
 namespace WindowsFormsApp1
 {
-    public partial class SettingsForm : Form
+    public partial class SettingsForm : ModernForm
     {
         private TextBox txtNewPassword;
         private Button btnSave;

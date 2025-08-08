@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace TableMasterPOS
 {
-    public partial class FormMenuEditor : Form
+    public partial class FormMenuEditor : ModernForm
     {
         private const string ApiUrl = "https://pos-api-hmavg4e4execcuhp.polandcentral-01.azurewebsites.net";
         private List<MenuItem> menuItems = new();
