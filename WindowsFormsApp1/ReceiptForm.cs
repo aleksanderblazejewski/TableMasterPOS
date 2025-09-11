@@ -2,15 +2,16 @@
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using TableMasterPOS;
 
-public class ReceiptForm : Form
+public class ReceiptForm : ModernForm
 {
     public ReceiptForm(Order order, Action onPayConfirmed)
     {
         Text = "Rachunek";
         Size = new Size(400, 500);
         StartPosition = FormStartPosition.CenterScreen;
-        BackColor = Color.White;
+        BackColor = ModernForm.PrimaryBackColor;
 
         var box = new TextBox
         {
@@ -20,7 +21,7 @@ public class ReceiptForm : Form
             Font = new Font("Segoe UI", 16, FontStyle.Regular),
             ScrollBars = ScrollBars.Vertical,
             Text = GenerateReceiptText(order),
-            BackColor = Color.White,
+            BackColor = ModernForm.SecondaryBackColor,
             BorderStyle = BorderStyle.None
         };
 
@@ -29,9 +30,7 @@ public class ReceiptForm : Form
             Text = "Zapłać",
             Dock = DockStyle.Bottom,
             Height = 50,
-            Font = new Font("Segoe UI", 10, FontStyle.Regular),
-            BackColor = SystemColors.Control,
-            UseVisualStyleBackColor = true
+            Font = new Font("Segoe UI", 10, FontStyle.Regular)
         };
         btn.Click += (s, e) =>
         {

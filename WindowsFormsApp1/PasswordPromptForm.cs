@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Windows.Forms;
+using TableMasterPOS;
 
 namespace WindowsFormsApp1
 {
-    public partial class PasswordPromptForm : Form
+    public partial class PasswordPromptForm : ModernForm
     {
         public string EnteredPassword => txtPassword.Text;
 
@@ -15,48 +16,70 @@ namespace WindowsFormsApp1
         {
 
             Text = "Wprowadź hasło";
-            Size = new System.Drawing.Size(400, 150);
+            Size = new System.Drawing.Size(400, 170);
             StartPosition = FormStartPosition.CenterParent;
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             MinimizeBox = false;
             ControlBox = false;
 
-            Label lblPrompt = new Label()
+            Label lblPrompt = new Label
             {
                 Text = promptText,
-                Location = new System.Drawing.Point(20, 20),
-                AutoSize = true
+                AutoSize = true,
+                Dock = DockStyle.Fill
             };
 
-            txtPassword = new TextBox()
+            txtPassword = new TextBox
             {
-                Location = new System.Drawing.Point(20, 45),
-                Width = 340,
+                Dock = DockStyle.Fill,
                 UseSystemPasswordChar = true
             };
 
-            btnOk = new Button()
+            btnOk = new Button
             {
                 Text = "OK",
                 DialogResult = DialogResult.OK,
-                Location = new System.Drawing.Point(200, 80)
+                Width = 100,
+                Height = 35
             };
 
-            btnCancel = new Button()
+            btnCancel = new Button
             {
                 Text = "Anuluj",
                 DialogResult = DialogResult.Cancel,
-                Location = new System.Drawing.Point(280, 80)
+                Width = 100,
+                Height = 35
             };
 
             AcceptButton = btnOk;
             CancelButton = btnCancel;
 
-            Controls.Add(lblPrompt);
-            Controls.Add(txtPassword);
-            Controls.Add(btnOk);
-            Controls.Add(btnCancel);
+            var buttonsPanel = new FlowLayoutPanel
+            {
+                FlowDirection = FlowDirection.RightToLeft,
+                Dock = DockStyle.Fill,
+                AutoSize = true
+            };
+            buttonsPanel.Controls.Add(btnCancel);
+            buttonsPanel.Controls.Add(btnOk);
+
+            var layout = new TableLayoutPanel
+            {
+                Dock = DockStyle.Fill,
+                RowCount = 3,
+                ColumnCount = 1,
+                Padding = new Padding(20)
+            };
+            layout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+            layout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+            layout.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+
+            layout.Controls.Add(lblPrompt, 0, 0);
+            layout.Controls.Add(txtPassword, 0, 1);
+            layout.Controls.Add(buttonsPanel, 0, 2);
+
+            Controls.Add(layout);
         }
     }
 }

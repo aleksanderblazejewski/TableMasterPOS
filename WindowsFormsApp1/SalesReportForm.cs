@@ -9,11 +9,12 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using TableMasterPOS;
 using TableMasterPOS.Properties;
 
 namespace WindowsFormsApp1
 {
-    public partial class SalesReportForm : Form
+    public partial class SalesReportForm : ModernForm
     {
         private DateTimePicker startDatePicker;
         private DateTimePicker endDatePicker;

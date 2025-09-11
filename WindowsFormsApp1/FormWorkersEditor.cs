@@ -7,8 +7,9 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TableMasterPOS;
 
-public class FormWorkersEditor : Form
+public class FormWorkersEditor : ModernForm
 {
     private const string ApiUrl = "https://pos-api-hmavg4e4execcuhp.polandcentral-01.azurewebsites.net";
     private List<Worker> workers = new();

@@ -127,6 +127,7 @@
     <Compile Include="Assets\TableGroup.cs" />
     <Compile Include="Assets\TableRenderer.cs" />
     <Compile Include="Assets\Worker.cs" />
+    <Compile Include="Assets\ModernForm.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -17,7 +17,7 @@ using Microsoft.VisualBasic;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form1 : Form
+    public partial class Form1 : ModernForm
     {
         private enum AppMode { Work, Edit }
         private AppMode currentMode = AppMode.Work;
@@ -79,7 +79,7 @@ namespace WindowsFormsApp1
             loadingPanel = new Panel
             {
                 Dock = DockStyle.Fill,
-                BackColor = Color.White,
+                BackColor = ModernForm.PrimaryBackColor,
                 Visible = true
             };
 
@@ -96,6 +96,7 @@ namespace WindowsFormsApp1
                 Text = "Ładowanie...",
                 Font = new Font("Segoe UI", 16, FontStyle.Bold),
                 AutoSize = true,
+                ForeColor = ModernForm.PrimaryForeColor,
                 Location = new Point((Screen.PrimaryScreen.WorkingArea.Width - 200) / 2, (Screen.PrimaryScreen.WorkingArea.Height - 300) / 2 + 320)
             };
 
@@ -104,7 +105,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(loadingPanel);
             loadingPanel.BringToFront();
 
-            this.BackColor = Color.White;
+            this.BackColor = ModernForm.PrimaryBackColor;
 
             btnWorkMode = new Button
             {
@@ -235,7 +236,7 @@ namespace WindowsFormsApp1
             {
                 Location = new Point(10, 50),
                 Size = new Size(actual_screen.WorkingArea.Width - 300, actual_screen.WorkingArea.Height - 60),
-                BackColor = Color.LightGray
+                BackColor = ModernForm.SecondaryBackColor
             };
             layoutPanel.MouseDown += LayoutPanel_MouseDown;
             layoutPanel.MouseMove += LayoutPanel_MouseMove;
@@ -246,7 +247,7 @@ namespace WindowsFormsApp1
             {
                 Location = new Point(actual_screen.WorkingArea.Width - 275, 50),
                 Size = new Size(250, actual_screen.WorkingArea.Height - 60),
-                BackColor = Color.LightGray,
+                BackColor = ModernForm.SecondaryBackColor,
                 Visible = true
             };
 
